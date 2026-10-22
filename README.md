@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# React Starter
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A minimal Create React App boilerplate preconfigured with ESLint (Airbnb rules), Prettier and VS Code settings, used as a clean starting point for new React projects.
 
-## Available Scripts
+![React](https://img.shields.io/badge/React-17-61DAFB?logo=react&logoColor=white) ![ESLint](https://img.shields.io/badge/ESLint-Airbnb-4B32C3?logo=eslint&logoColor=white) ![Prettier](https://img.shields.io/badge/Prettier-2.5-F7B93E?logo=prettier&logoColor=black)
 
-In the project directory, you can run:
+## Overview
 
-### `npm start`
+Set up in early 2022 as a reusable starter while learning React. The app itself only renders "Hello world"; the value is in the tooling configuration so linting and formatting work out of the box.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Create React App 5 (react-scripts 5.0.0) with React 17
+- `.eslintrc` extending `airbnb`, `airbnb/hooks`, `eslint:recommended`, `prettier` and `plugin:jsx-a11y/recommended`
+- Prettier enforced through `eslint-plugin-prettier` (single quotes, 4-space tabs, 100-char lines, ES5 trailing commas, semicolons)
+- React Hooks rules enforced as errors
+- `.vscode/settings.json` with ESLint fix-on-save, organize imports and Emmet enabled for JSX
+- Testing Library (`@testing-library/react`, `jest-dom`, `user-event`) and `web-vitals` included
 
-### `npm test`
+## Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React 17, Create React App 5
+- ESLint 8 configs: Airbnb, Prettier, jsx-a11y, react, react-hooks, import
+- Prettier 2.5
+- Jest + React Testing Library
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Prerequisites: Node.js 14+ and npm.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/coderasraf/react-starter.git my-app
+cd my-app
+npm install
+npm start        # http://localhost:3000
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Other scripts:
 
-### `npm run eject`
+| Command | Description |
+| --- | --- |
+| `npm test` | Run tests in watch mode |
+| `npm run build` | Production build to `build/` |
+| `npm run eject` | Eject from Create React App (one-way) |
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+For the editor setup to work, install the ESLint and Prettier extensions in VS Code.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```text
+.vscode/settings.json   # Format/lint on save, Emmet for JSX
+.eslintrc               # Airbnb + Prettier lint rules
+public/                 # index.html, manifest, robots.txt
+src/
+├── App.js              # "Hello world" component
+├── index.js            # Entry point
+├── reportWebVitals.js
+└── setupTests.js
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Author
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Built by **Ashraf Siddik**, Shopify developer & CRO specialist.
+- Website: [ashraf-siddik.com](https://ashraf-siddik.com)
+- GitHub: [@coderasraf](https://github.com/coderasraf)
